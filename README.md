@@ -1,16 +1,11 @@
 # ets_mobile_programming_d_23_24
 
-A new Flutter project.
+Kadek Ari Dharmika - 5025201239
 
-## Getting Started
+![image](https://github.com/Arraidh/mobile-programming-d-23-24/assets/90848018/151d2882-8c20-44ba-a94f-ccfeaa10545f)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/Arraidh/mobile-programming-d-23-24/assets/90848018/ba9e930a-8bbf-4401-b9b5-95ee4848ed0c)
+![image](https://github.com/Arraidh/mobile-programming-d-23-24/assets/90848018/e6b341e3-43ce-4d63-af6a-ff8451d48b32)
+![image](https://github.com/Arraidh/mobile-programming-d-23-24/assets/90848018/0856aea0-bed2-4d05-92f1-9afcb2a73614)
+![image](https://github.com/Arraidh/mobile-programming-d-23-24/assets/90848018/cd99d873-7080-4bf2-a499-12aa36b8dcd3)
+![image](https://github.com/Arraidh/mobile-programming-d-23-24/assets/90848018/85630d3b-7189-4d74-b8d0-605766fff01b)
