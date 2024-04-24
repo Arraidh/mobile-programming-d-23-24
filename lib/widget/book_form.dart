@@ -80,13 +80,14 @@ class BookFormWidget extends StatelessWidget {
     onChanged: onChangedTitle,
   );
 
+
   Widget buildImage() => TextFormField(
     maxLines: 1,
     initialValue: image,
     style: TextStyle(
       color: Colors.blue.shade900,
       fontWeight: FontWeight.bold,
-      fontSize: 24,
+      fontSize: 12,
     ),
     decoration: InputDecoration(
       border: InputBorder.none,
