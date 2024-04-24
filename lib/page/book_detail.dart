@@ -47,14 +47,33 @@ class _BookDetailPageState extends State<BookDetailPage> {
       child: ListView(
         padding: const EdgeInsets.symmetric(vertical: 8),
         children: [
-          Image(
-            image: NetworkImage(book.image),
+          Container(
+            child:
+              ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: Image(
+                image: NetworkImage(book.image),
+
+              ),
+            ),
+
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.blueGrey.shade200,
+                  blurRadius: 4,
+                  offset: Offset(4, 8), // Shadow position
+                ),
+              ],
+            ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 24),
           Text(
             book.title,
-            style: const TextStyle(
-              color: Colors.white,
+            style: TextStyle(
+              color: Colors.blue.shade900,
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
@@ -62,13 +81,13 @@ class _BookDetailPageState extends State<BookDetailPage> {
           const SizedBox(height: 8),
           Text(
             DateFormat.yMMMd().format(book.createdTime),
-            style: const TextStyle(color: Colors.white38),
+            style: TextStyle(color: Colors.blue.shade900),
           ),
           const SizedBox(height: 8),
           Text(
             book.description,
             style:
-            const TextStyle(color: Colors.white70, fontSize: 18),
+            TextStyle(color: Colors.blue.shade900, fontSize: 18),
           )
         ],
       ),

@@ -48,18 +48,20 @@ class _CollectionPageState extends State<CollectionPage> {
       ),
       actions: const [Icon(Icons.search), SizedBox(width: 12)],
     ),
-    body: Center(
-      child: isLoading
-          ? const CircularProgressIndicator()
-          : books.isEmpty
-          ? const Text(
-        'No Books',
-        style: TextStyle(color: Colors.white, fontSize: 24),
-      )
-          : buildBooks(),
+    body: SingleChildScrollView(
+      child: Center(
+        child: isLoading
+            ? const CircularProgressIndicator()
+            : books.isEmpty
+            ? const Text(
+          'No Books',
+          style: TextStyle(color: Colors.white, fontSize: 24),
+        )
+            : buildBooks(),
+      ),
     ),
     floatingActionButton: FloatingActionButton(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blue.shade300,
       child: const Icon(Icons.add),
       onPressed: () async {
         await Navigator.of(context).push(

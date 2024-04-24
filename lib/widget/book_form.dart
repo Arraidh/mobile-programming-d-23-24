@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:core';
 
 class BookFormWidget extends StatelessWidget {
   final bool? isImportant;
@@ -64,15 +65,15 @@ class BookFormWidget extends StatelessWidget {
   Widget buildTitle() => TextFormField(
     maxLines: 1,
     initialValue: title,
-    style: const TextStyle(
-      color: Colors.white70,
+    style: TextStyle(
+      color: Colors.blue.shade900,
       fontWeight: FontWeight.bold,
       fontSize: 24,
     ),
-    decoration: const InputDecoration(
+    decoration: InputDecoration(
       border: InputBorder.none,
       hintText: 'Title',
-      hintStyle: TextStyle(color: Colors.white70),
+      hintStyle: TextStyle(color: Colors.blue.shade900),
     ),
     validator: (title) =>
     title != null && title.isEmpty ? 'The title cannot be empty' : null,
@@ -82,33 +83,49 @@ class BookFormWidget extends StatelessWidget {
   Widget buildImage() => TextFormField(
     maxLines: 1,
     initialValue: image,
-    style: const TextStyle(
-      color: Colors.white70,
+    style: TextStyle(
+      color: Colors.blue.shade900,
       fontWeight: FontWeight.bold,
       fontSize: 24,
     ),
-    decoration: const InputDecoration(
+    decoration: InputDecoration(
       border: InputBorder.none,
       hintText: 'image url',
-      hintStyle: TextStyle(color: Colors.white70),
+      hintStyle: TextStyle(color: Colors.blue.shade900),
     ),
-    validator: (image) =>
-    image != null && image.isEmpty ? 'The image url cannot be empty' : null,
+    validator: (image) => image != null && image.isEmpty ? 'The image url cannot be empty' : getUrlType(image).name != 'IMAGE' ? 'Should enter an image URL of PNG JPG or JPEG' : null,
+
     onChanged: onChangedImage,
   );
 
   Widget buildDescription() => TextFormField(
     maxLines: 5,
     initialValue: description,
-    style: const TextStyle(color: Colors.white60, fontSize: 18),
-    decoration: const InputDecoration(
+    style:  TextStyle(color: Colors.blue.shade900, fontSize: 18),
+    decoration:  InputDecoration(
       border: InputBorder.none,
       hintText: 'Type something...',
-      hintStyle: TextStyle(color: Colors.white60),
+      hintStyle: TextStyle(color: Colors.blue.shade900),
     ),
     validator: (title) => title != null && title.isEmpty
         ? 'The description cannot be empty'
         : null,
     onChanged: onChangedDescription,
   );
+
+
+
+}
+
+enum UrlType { IMAGE, UNKNOWN }
+
+
+UrlType getUrlType(String? url) {
+  Uri uri = Uri.parse(url!);
+  String typeString = uri.path.substring(uri.path.length - 4).toLowerCase();
+  if (typeString.contains('jpg') || typeString.contains('jpeg') || typeString.contains('ppg')) {
+    return UrlType.IMAGE;
+  } else {
+    return UrlType.UNKNOWN;
+  }
 }

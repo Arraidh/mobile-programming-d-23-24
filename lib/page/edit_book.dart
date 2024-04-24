@@ -66,7 +66,7 @@ class _AddEditBookPageState extends State<AddEditBookPage> {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: isFormValid ? null : Colors.grey.shade700,
+          backgroundColor: isFormValid ? null : Colors.blue.shade500,
         ),
         onPressed: addOrUpdateBook,
         child: const Text('Save'),
